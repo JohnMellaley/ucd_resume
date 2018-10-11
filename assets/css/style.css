@@ -9,6 +9,10 @@
      background-color: #ffffff;
  }
 
+ .bg-color-work-history{
+     background-color: #9b59b6;
+ }
+
 .ui-menu-color-home{
     background-color: #e67e22;
 }
@@ -68,9 +72,8 @@ header {
 .heading{
     margin-left: 50px;
 }
-
 .logo{
-   background :url("../images/john.jpg"); 
+   background: url('../images/john.png'); 
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -212,7 +215,7 @@ footer .cv-pdf i:hover{
 .personal-info-item{
     margin-bottom: 20px;
     display: block;
-    clear:both;
+    clear: both;
 }
 
 .personal-info-item .key,
@@ -222,7 +225,7 @@ footer .cv-pdf i:hover{
 
 .personal-info-item .key p,
 .personal-info-item .value p{
-    margin: 0px;
+    margin: 0;
 }
 
 .personal-info-item .key{
@@ -237,10 +240,65 @@ footer .cv-pdf i:hover{
     font-weight: 700;
 }
 
-.personal-info-item .value p{
+.personal-info-item .value {
     display: inline-block;
     position: relative;
     width:60%;
+}
+/*--------------------------------------------------Skills----------------------------------------------------- --*/
+.progress{
+    position:relative;
+    height:25px;
+}
+
+.progress-type{
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 3px 30px 2px 10px;
+    color: #fafafa;
+    background-color: rgba(25,25,25,0.2);
+}
+
+.progress-section{
+    margin: 40px 20px;
+}
+
+/*--------------------------------------------------Work History----------------------------------------------------- --*/
+.timeline-item{
+    padding:4px 2px 0px 2px;
+    position: relative;
+    color: #fafafa;
+    border-left: 1px; 
+}
+
+.timeline-item p{
+    padding: 0;
+    margin: 0;
+}
+.timeline-item::before{
+    content: attr(dates);
+    position: absolute;
+    left:2.5em;
+    top:3em;
+    display:block;
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+    font-size: .8em;
+    padding:0;
+    margin:0;
+}
+
+.timeline-item::after{
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;
+    content: '';
+    background: #fafafa;
 }
 
 /*--------------------------------------------------Media Query----------------------------------------------------- --*/
@@ -248,5 +306,5 @@ footer .cv-pdf i:hover{
 .section-column{
     padding:0 30px 30px;
     float: none;
-    display: table-cell;
+    display: table-cell;}
 }
